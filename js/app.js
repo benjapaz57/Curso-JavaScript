@@ -1,7 +1,9 @@
-let nombre = prompt('Ingrese su nombre');
-let edad = Number(prompt('Ingrese su edad'));
-if (edad >= 18){
-    console.log(nombre + ' es mayor de edad.');
-} else {
-    console.log(nombre + ' es menor de edad.');
+let edad = prompt('Ingrese su edad')
+let edadPareja = prompt('Ingrese la edad de su pareja')
+if (edad > edadPareja){
+    console.log('Usted es mayor que su pareja.')
+} else if (edad < edadPareja){
+    console.log('Su pareja es mayor que usted')
+} else{
+    console.log('Tienen la misma edad')
 }
