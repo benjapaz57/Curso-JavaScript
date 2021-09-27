@@ -1,8 +1,22 @@
-//El ejemplo será de un turnero
-const turnos = (nombre, dia, hora) => `El turno de ${nombre} será el ${dia} a las ${hora} horas`
-let nombre = prompt('Ingrese su nombre y apellido');
-let dia = prompt('Ingrese el día que desea venir');
-let hora = prompt('Ingrese la hora en la que desea venir');
+//Ejemplo act complementaria funciones
+function solicitarMonto (){
+    let monto = Number(prompt('Ingrese el monto.'))
+    let porcentaje = Number(prompt('Ingrese el % a ganar'))
+    
+    operacion (monto, porcentaje);
 
-console.log(turnos(nombre, dia, hora))
-alert('Su solicitud de un turno se guardó correctamente')
+}
+
+function operacion (a, b){
+    let multiplicacion = a * b
+    let division = multiplicacion / 100
+    let suma = division + a
+    resultado (suma)
+}
+
+function resultado (a){
+    console.log(a)
+    alert (a + " Es el monto final")
+}
+
+solicitarMonto();
