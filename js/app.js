@@ -1,31 +1,21 @@
-//Clase 6 arrays
-
-class Pacientes {
-    constructor(nombre, mail){
-        this.nombre = nombre;
-        this.mail = mail;
-    }
-
+//1- pedir nombre y apellido / dia y hora / mail
+//2- crear objeto para almacenar dicha info
+//3- alert y console.log "guardaste tu turno correctamente"
+//4- guardar el turno
+class Turno{
+    constructor(nombre, dia, hora, mail){
+    this.nombre = nombre,
+    this.dia = dia,
+    this.hora = hora,
+    this.mail = mail
+    } 
 }
 
-let datosPacientes = [];
+let nombre = prompt('Ingrese su nombre y apellido')
+let dia = prompt('Ingrese el dia')
+let hora = prompt('Ingrese la hora')
+let mail = prompt('Ingrese su mail')
 
-const agregarPacientes = () => {
-    let nombre = prompt('Ingrese el nombre y apellido del paciente')
-    let mail = prompt('Ingrese el mail del paciente')
-
-    let paciente = new Pacientes (nombre, mail)
-    datosPacientes.push(paciente)
-}
-
-datosPacientes.sort((a, b) => {
-    if (a.nombre > b.nombre){
-        return 1
-    }
-    if (a.nombre < b.nombre){
-        return -1
-    }
-    return 0
-})
-
-console.log(datosPacientes)
+const turno1 = new Turno(nombre,dia,hora,mail)
+console.log(turno1)
+alert(`Felicitaciones ${nombre}, guardaste tu turno correctamente`)
